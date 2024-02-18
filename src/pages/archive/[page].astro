@@ -4,8 +4,6 @@
 import PostPreview from '../../layouts/PostPreview.astro';
 import FormattedDate from '../../components/FormattedDate.astro';
 
-export const prerender = true;
-
 export async function getStaticPaths({ paginate }) {
 	const res = await fetch("https://developer.wordpress.org/news/wp-json/wp/v2/posts?per_page=21&_fields=id,slug,date,title,excerpt,content,link,_links&_embed=author,wp:featuredmedia,wp:term");
 	const archivePages = await res.json();
