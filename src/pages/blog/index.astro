@@ -3,6 +3,7 @@
 import PostPreview from '../../layouts/PostPreview.astro';
 import FormattedDate from '../../components/FormattedDate.astro';
 
+export const prerender = false;
 
 let res = await fetch("https://developer.wordpress.org/news/wp-json/wp/v2/posts?per_page=21&_fields=id,slug,date,title,excerpt,content,link,_links&_embed=author,wp:featuredmedia,wp:term");
 let posts = await res.json();
