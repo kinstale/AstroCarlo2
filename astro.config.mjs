@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 
 // SSR
-import node from '@astrojs/node';
+//import node from '@astrojs/node';
 
 import sitemap from '@astrojs/sitemap';
 
